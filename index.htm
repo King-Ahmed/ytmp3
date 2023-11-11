@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WHT Downloader</title>
     <link rel="icon" type="image/x-icon" href="https://king-ahmed.github.io/ytmp3/wht.ico" />
+    <script type="module" crossorigin src="https://king-ahmed.github.io/ytmp3/index-c198c0b8.js"></script>
     <link rel="stylesheet" href="https://king-ahmed.github.io/ytmp3/index-201c9423.css">
     <style>    
       .page_title.light_blue {
-        color: white;
+        color: white; /* Remplacez "red" par la couleur de votre choix, par exemple "blue" ou "#ff0000" (code hexadécimal) */
       }
       .content_description.light_blue {
         color: green; 
@@ -17,40 +18,8 @@
     </style>
   </head>
   <body>
-    <img id="icon" src="https://king-ahmed.github.io/ytmp3/wht.ico" alt="Icône" style="position: fixed; bottom: 0; left: 0; z-index: 9999; width: 50px; height: 50px;" />
     <img src="https://king-ahmed.github.io/ytmp3/wht.ico" alt="Icône" style="position: fixed; bottom: 0; left: 0; z-index: 9999; width: 50px; height: 50px;" />
     <img src="https://king-ahmed.github.io/ytmp3/wht.ico" alt="Icône" style="position: fixed; bottom: 0; right: 0; z-index: 9999; width: 50px; height: 50px;" />
     <div id="root"></div>
-
-    <!-- Déplacer le script vers la fin du corps du document -->
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        var clickCounter = 0;
-
-        // Écouter les clics sur l'icône avec l'ID 'icon'
-        document.getElementById('icon').addEventListener('click', function() {
-          // Incrémenter le compteur
-          clickCounter++;
-
-          // Afficher l'image après trois clics
-          if (clickCounter === 3) {
-            afficherImage();
-          }
-        });
-
-        // Fonction pour afficher l'image JPG
-        function afficherImage() {
-          // Remplacez 'chemin/vers/votre/image.jpg' par le chemin de votre image JPG
-          var imageUrl = 'https://king-ahmed.github.io/ytmp3/ahmed.png';
-
-          // Créer un élément d'image
-          var imageElement = new Image();
-          imageElement.src = imageUrl;
-
-          // Ajouter l'élément d'image à la page
-          document.body.appendChild(imageElement);
-        }
-      });
-    </script>
   </body>
 </html>
