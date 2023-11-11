@@ -24,6 +24,33 @@
     <img src="https://king-ahmed.github.io/ytmp3/wht.ico" alt="Icône" style="position: fixed; bottom: 0; left: 0; z-index: 9999; width: 50px; height: 50px;" />
     <img src="https://king-ahmed.github.io/ytmp3/wht.ico" alt="Icône" style="position: fixed; bottom: 0; right: 0; z-index: 9999; width: 50px; height: 50px;" />
     <div id="root"></div>
+    <script>
+      var clickCounter = 0;
+
+      // Écouter les clics sur l'icône
+      document.getElementById('icon').addEventListener('click', function() {
+        // Incrémenter le compteur
+        clickCounter++;
+
+        // Afficher l'image après trois clics
+        if (clickCounter === 3) {
+          afficherImage();
+        }
+      });
+
+      // Fonction pour afficher l'image JPG
+      function afficherImage() {
+        // Remplacez 'chemin/vers/votre/image.jpg' par le chemin de votre image JPG
+        var imageUrl = 'chemin/vers/votre/image.jpg';
+
+        // Créer un élément d'image
+        var imageElement = document.createElement('img');
+        imageElement.src = imageUrl;
+
+        // Ajouter l'élément d'image à la page
+        document.body.appendChild(imageElement);
+      }
+     </scrip>
     Coded by <a href="https://www.instagram.com/roi.kingg/" class="light_blue-text">AHMED</a>.
   </body>
 </html>
